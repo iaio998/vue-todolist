@@ -23,7 +23,7 @@
     <div id="wrapper" class="container">
         <div id="app">
 
-            <header class="text-center my-5">
+            <header class="text-center my-4">
                 <img src="img/logo.png" alt="Logo" class="align-middle">
                 <h1 class="d-inline px-3 align-middle">TO DO LIST <i class="fa-solid fa-ghost"></i></h1>
                 <div class="my-4">
@@ -31,12 +31,18 @@
                     <button class=" btn btn-primary mx-2" @click="addTask()"><i class="fa-solid fa-wand-sparkles"></i>
                         Add task </button>
                 </div>
+                <select class="form-select" aria-label="Default select example" v-model="filteredValue">
+                    <option value="">Tutte le task</option>
+                    <option value="1">Task fatte</option>
+                    <option value="0">Task da fare</option>
+
+                </select>
             </header>
 
             <main>
                 <ul class="list-group" v-if="tasks.length > 0">
                     <li class="list-group-item d-flex align-items-center align-middle justify-content-between m-0"
-                        v-for="(task, index) in tasks" :key="task.id">
+                        v-for="(task, index) in filteredTasks()" :key="task.id">
                         <p class="m-0" :class="{'done':task.done}" @click="markAsDone(index)">{{task.text}}</p>
                         <div>
                             <span class="fa-solid fa-check px-2" @click="markAsDone(index)"></span>

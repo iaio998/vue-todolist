@@ -16,6 +16,13 @@ body {
   margin: 0 auto;
   display: inline-block;
 }
+.form-select {
+  width: 11%;
+  margin: 0 auto;
+  display: inline-block;
+  background-color: #3a3a3a80 !important;
+  color: white !important;
+}
 header img {
   width: 80px;
   height: 80px;

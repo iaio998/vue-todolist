@@ -22,6 +22,7 @@ const miaApp = createApp({
       ],
       lastId: 3,
       todoText: "",
+      filteredValue: "",
     };
   },
   methods: {
@@ -43,6 +44,17 @@ const miaApp = createApp({
     },
     markAsDone(index) {
       this.tasks[index].done = !this.tasks[index].done;
+    },
+    filteredTasks() {
+      return this.tasks.filter((task) => {
+        if (this.filteredValue === "0" && !task.done) {
+          return true;
+        } else if (this.filteredValue === "1" && task.done) {
+          return true;
+        } else if (this.filteredValue === "") {
+          return true;
+        }
+      });
     },
   },
 });
