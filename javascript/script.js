@@ -20,7 +20,16 @@ const miaApp = createApp({
           done: false,
         },
       ],
+      lastId: 3,
     };
+  },
+  methods: {
+    // getIndex(id, array) {
+    //   return array.findIndex((el) => el.id === id);
+    // },
+    removeTask(i) {
+      this.tasks.splice(i, 1);
+    },
   },
 });
 
