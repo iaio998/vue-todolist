@@ -1,11 +1,27 @@
-"use strict";
-
 const { createApp } = Vue;
 
-createApp({
+const miaApp = createApp({
   data() {
     return {
-      message: "Hello Vue!",
+      tasks: [
+        {
+          id: 1,
+          text: "Lavare i piatti",
+          done: true,
+        },
+        {
+          id: 2,
+          text: "Fare la spesa",
+          done: false,
+        },
+        {
+          id: 3,
+          text: "Portare a spasso il cane",
+          done: false,
+        },
+      ],
     };
   },
-}).mount("#app");
+});
+
+miaApp.mount("#app");
