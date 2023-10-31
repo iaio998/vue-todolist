@@ -34,7 +34,7 @@
             </header>
 
             <main>
-                <ul class="list-group">
+                <ul class="list-group" v-if="tasks.length > 0">
                     <li class="list-group-item d-flex align-items-center align-middle justify-content-between m-0"
                         v-for="(task, index) in tasks" :key="task.id">
                         <p class="m-0" :class="{'done':task.done}" @click="markAsDone(index)">{{task.text}}</p>
@@ -44,6 +44,12 @@
                         </div>
                     </li>
                 </ul>
+                <ul class="list-group" v-else>
+                    <li class="list-group-item d-flex align-items-center align-middle justify-content-between m-0">
+                        <p class="m-0">La tua lista e' vuota</p>
+                    </li>
+                </ul>
+
             </main>
 
         </div>
