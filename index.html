@@ -15,20 +15,30 @@
     <!-- link to Font-Family and CSS Files -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Document Title -->
-    <title>To do list VUE</title>
+    <title>Halloween to do list</title>
 </head>
 
 <body>
 
-    <div class="container">
+    <div id="wrapper" class="container">
         <div id="app">
 
-            <header>
-
+            <header class="text-center my-5">
+                <img src="img/logo.png" alt="Logo" class="align-middle">
+                <h1 class="d-inline px-3 align-middle">TO DO LIST <i class="fa-solid fa-ghost"></i></h1>
             </header>
 
             <main>
-
+                <ul class="list-group">
+                    <li class="list-group-item d-flex align-items-center align-middle justify-content-between m-0"
+                        v-for="(task, index) in tasks">
+                        <p class="m-0" :class="{'done':task.done}">{{task.text}}</p>
+                        <div>
+                            <span class="fa-solid fa-check px-2"></span>
+                            <span class=" fa-solid fa-trash px-2"></span>
+                        </div>
+                    </li>
+                </ul>
             </main>
 
         </div>
@@ -36,7 +46,7 @@
 
 
     <!-- My JS -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src=" https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="javascript/script.js"></script>
 </body>
 

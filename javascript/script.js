@@ -6,17 +6,17 @@ const miaApp = createApp({
       tasks: [
         {
           id: 1,
-          text: "Lavare i piatti",
+          text: "Procacciare cervelli",
           done: true,
         },
         {
           id: 2,
-          text: "Fare la spesa",
+          text: "Intagliare le zucche",
           done: false,
         },
         {
           id: 3,
-          text: "Portare a spasso il cane",
+          text: "Affilare i denti",
           done: false,
         },
       ],

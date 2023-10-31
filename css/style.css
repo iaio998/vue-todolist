@@ -2,5 +2,33 @@ body {
   background-image: url(../img/38474-3840x2160-desktop-4k-halloween-wallpaper-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  color: orange;
+  color: rgba(255, 166, 0, 0.767);
+}
+#wrapper {
+  width: 100%;
+  height: 100vh;
+}
+.done {
+  text-decoration: line-through;
+}
+header img {
+  width: 80px;
+  height: 80px;
+  display: inline;
+}
+span,
+p {
+  cursor: pointer;
+}
+ul {
+  width: 60%;
+
+  margin: 0 auto;
+}
+li {
+  background-color: #3a3a3a80 !important;
+  color: white !important;
+}
+li:hover {
+  background-color: rgba(255, 166, 0, 0.589) !important;
 }
