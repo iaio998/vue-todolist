@@ -41,6 +41,9 @@ const miaApp = createApp({
       this.tasks.unshift(newTask);
       this.todoText = "";
     },
+    markAsDone(index) {
+      this.tasks[index].done = !this.tasks[index].done;
+    },
   },
 });
 

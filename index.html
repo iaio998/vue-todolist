@@ -37,9 +37,9 @@
                 <ul class="list-group">
                     <li class="list-group-item d-flex align-items-center align-middle justify-content-between m-0"
                         v-for="(task, index) in tasks" :key="task.id">
-                        <p class="m-0" :class="{'done':task.done}">{{task.text}}</p>
+                        <p class="m-0" :class="{'done':task.done}" @click="markAsDone(index)">{{task.text}}</p>
                         <div>
-                            <span class="fa-solid fa-check px-2"></span>
+                            <span class="fa-solid fa-check px-2" @click="markAsDone(index)"></span>
                             <span class=" fa-solid fa-trash px-2" @click="removeTask(index)"></span>
                         </div>
                     </li>
