@@ -21,6 +21,7 @@ const miaApp = createApp({
         },
       ],
       lastId: 3,
+      todoText: "",
     };
   },
   methods: {
@@ -29,6 +30,16 @@ const miaApp = createApp({
     // },
     removeTask(i) {
       this.tasks.splice(i, 1);
+    },
+    addTask() {
+      this.lastId++;
+      const newTask = {
+        id: this.lastId,
+        text: this.todoText,
+        status: false,
+      };
+      this.tasks.unshift(newTask);
+      this.todoText = "";
     },
   },
 });
